@@ -26,6 +26,8 @@ urlpatterns = [
     url(r'^polls/index/(?P<id>\d{2})/$','polls.views.index'),
     url(r'^index/$','home.views.index'),
     url(r'^contract/$','home.views.contract'),
+    url(r'^work/$','home.views.work'),
+    url(r'^projects/$','home.views.projects'),
 ]
 
 
