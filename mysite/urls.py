@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^contract/$','home.views.contract'),
     url(r'^work/$','home.views.work'),
     url(r'^projects/$','home.views.projects'),
+    url(r'^education/$','home.views.education'),
 ]
 
 

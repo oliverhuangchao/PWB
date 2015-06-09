@@ -16,3 +16,6 @@ def work(req):
 
 def projects(req):
 	return render(req,'projects.html',{'title':'Previous Projects'})
+
+def education(req):
+	return render(req,'education.html',{'title':'Education'})
