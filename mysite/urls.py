@@ -23,12 +23,9 @@ from django.conf.urls import patterns
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     #url(r'^polls/index/$',index),
-    url(r'^polls/index/(?P<id>\d{2})/$','polls.views.index'),
     url(r'^index/$','home.views.index'),
-    url(r'^contract/$','home.views.contract'),
     url(r'^work/$','home.views.work'),
     url(r'^projects/$','home.views.projects'),
-    url(r'^education/$','home.views.education'),
 ]
 
 

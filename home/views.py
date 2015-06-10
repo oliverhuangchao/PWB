@@ -5,11 +5,8 @@ from django.template import loader, Context
 # Create your views here.
 
 def index(req):
-	return render(req,'homepage.html',{'title':'Chao\'s homepage','name':'chaoh'})
+	return render(req,'newindex.html',{'title':'Chao\'s homepage','name':'chaoh'})
 	#return render_to_response('index.html',{'title':'hello','id':'abcdefg'}) 
-
-def contract(req):
-	return render(req,'contract.html',{'title':'Contract information'})
 
 def work(req):
 	return render(req,'work.html',{'title':'My Working experience'})
@@ -17,5 +14,3 @@ def work(req):
 def projects(req):
 	return render(req,'projects.html',{'title':'Previous Projects'})
 
-def education(req):
-	return render(req,'education.html',{'title':'Education'})
