@@ -17,15 +17,16 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls import patterns
-#from polls.views import index
-#from home.views import index
+
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     #url(r'^polls/index/$',index),
     url(r'^index/$','home.views.index'),
-    url(r'^work/$','home.views.work'),
-    url(r'^projects/$','home.views.projects'),
+    url(r'^index/RA-Clemson/$','home.views.ra_work'),
+    url(r'^index/BD-Majoraide/$','home.views.bd_majoraide')
 ]
 
 

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-#c!66r^bh-#$7562*pqkx$-fco4b4stwg_z$v2o=$!g)psfar'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =  True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []#['127.0.0.1']
 
 
 # Application definition
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls',
     'home',
 ]
 
@@ -127,7 +126,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = ''#'/home/chaoh/Documents/djangoTest/helloworld/static/'
 STATIC_PATH = os.path.join( HERE , 'static').replace('\\','/')
 
 # URL prefix for static files.
@@ -140,5 +139,13 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(HERE,'static').replace('\\','/'),
+    #'/home/chaoh/Documents/djangoTest/helloworld/static',
+    #os.path.join(HERE,'static').replace('\\','/'),
+    STATIC_PATH,
 )
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',  
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'  
+)
+
